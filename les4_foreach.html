@@ -1,0 +1,14 @@
+<script>
+
+var numbers = [2, 6, 11, 5, 9, 8, 3, 46, 4];
+
+numbers.forEach(function(element, index) {
+	if (numbers.length-1 == index) {
+		console.log("Item " + index + " = " + element);
+	} else {	
+	var b = element + numbers[index+1];
+    console.log("Item " + index + " = " + b);
+	}
+});
+
+</script>
