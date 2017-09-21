@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Odd Style</title>
+  </head>
+  <body>
+      <ul data-show-oddeven>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+        <li>E</li>
+        <li>F</li>
+        <li>G</li>
+      </ul>
+      <script type="text/javascript">
+        var ul = document.querySelectorAll("ul[data-show-oddeven] li");
+        console.log(ul);
+        ul.forEach(OdEv);
+        function OdEv(value, index, array){
+        if (index % 2 == 0) {
+          array[index].setAttribute("title", "Odd");
+        }else {
+          array[index].setAttribute("title", "Even");
+        }
+        }
+      </script>
+  </body>
+</html>
