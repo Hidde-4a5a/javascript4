@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+
+  <form>
+    <div>
+      <label>Number 1:</label>
+      <input id="one" type="number" name="firstNumber">
+    </div>
+    <div>
+      <label>Number 2:</label>
+      <input id="two" type="number" name="secondNumber">
+    </div>
+    <div>
+      <button type="button" id="multiply">Multiply</button>
+    </div>
+    <div id="result"></div>
+  </form>
+  <script>
+
+  function multiplyModule(){
+
+    function sum(one, two, result){
+      var one = document.getElementById('one').value;
+      var two = document.getElementById('two').value;
+      var result = document.getElementById('result').innerHTML = one * two;
+    }
+
+    document.querySelector('button[type="button"]').addEventListener('click', sum);
+  }
+  // load nultiply module multiplyModule();
+multiplyModule();
+  </script>
+
+</body>
+</html>

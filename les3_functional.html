@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input type="number" id="input"><button id="button">Bereken</button><br>
+<div id="result"></div>
+
+<script>
+	const button = document.querySelector('#button');
+	const result = document.querySelector('#result');
+
+	button.addEventListener('click', e => {
+		const input = document.querySelector('#input').value;
+		result.innerHTML = 'result = ' + factorial(parseInt(input));
+	});
+
+
+	function factorial(number) {
+		var result = number;
+
+		for(var i = number -1; i != 0; i--) {	
+			result *= i;
+		}
+
+		return result;
+	}
+</script>
+</body>
+</html>
